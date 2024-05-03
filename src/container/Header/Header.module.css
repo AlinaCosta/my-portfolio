@@ -1,0 +1,38 @@
+.header {
+  background-color: var(--color-white);
+}
+.header__info {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header__img {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.palette {
+  display: grid;
+  gap: 0.25rem;
+  grid-template-columns: repeat(8, 100px);
+  grid-template-rows: repeat(4, 100px);
+}
+.box {
+  aspect-ratio: 1;
+  background-color: var(--color-primary);
+  grid-column: span 2;
+  clip-path: path(
+    "M90,10 C100,0 100,0 110,10 190,90 190,90 190,90 200,100 200,100 190,110 190,110 110,190 110,190 100,200 100,200 90,190 90,190 10,110 10,110 0,100 0,100 10,90Z"
+  );
+
+  &:nth-of-type(5) {
+    grid-column: 2 / span 2;
+  }
+}
